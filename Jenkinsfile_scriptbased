@@ -6,7 +6,7 @@ node {
       // Get the Maven tool.
       // ** NOTE: This 'M3' Maven tool must be configured
       // **       in the global configuration.           
-      mvnHome = tool 'Maven'
+      mvnHome = tool 'maven'
    }
    stage('Build') {
       // Run the maven build
@@ -19,7 +19,7 @@ node {
    }
    stage ('deploy'){
    echo 'deployment started'
-       bat '''copy C:\\Users\\Madhu\\.jenkins\\workspace\\jmsth20-pipeline-tomcat\\target\\*.war F:\\softwares\\apache-tomcat-7.0.53\\webapps\\'''
+       bat '''copy C:\\Users\\punes\\.jenkins\\workspace\\Spring-helloword-pipeline\\target\\*.war C:\\Users\\punes\\Downloads\\apache-tomcat-8.5.46-windows-x64\\apache-tomcat-8.5.46\\webapps'''
    }  
    
 }
